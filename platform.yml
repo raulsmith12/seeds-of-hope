@@ -4,12 +4,12 @@ services:
   frontend:
     type: static
     path: frontend
-    buildCommand: npm ci && npm run build
-    outputDirectory: out
+    build_command: npm ci && npm run build
+    output_directory: out
 
   backend:
     type: node
     path: backend
-    buildCommand: npm ci
-    startCommand: npm start
-    healthcheckPath: /health
+    build_command: npm ci
+    start_command: npm start
+    healthcheck_path: /health
