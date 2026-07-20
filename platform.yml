@@ -1,11 +1,13 @@
+project: seeds-of-hope
+
 services:
-  - name: frontend
+  frontend:
     type: static
     path: frontend
     buildCommand: npm ci && npm run build
     outputDirectory: out
 
-  - name: backend
+  backend:
     type: node
     path: backend
     buildCommand: npm ci
