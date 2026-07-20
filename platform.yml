@@ -1,0 +1,13 @@
+services:
+  - name: frontend
+    type: static
+    path: frontend
+    buildCommand: npm ci && npm run build
+    outputDirectory: out
+
+  - name: backend
+    type: node
+    path: backend
+    buildCommand: npm ci
+    startCommand: npm start
+    healthcheckPath: /health
