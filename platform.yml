@@ -8,3 +8,4 @@ services:
   backend:
     type: node
     path: backend
+    healthcheck: /health
