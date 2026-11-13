@@ -1,3 +1,4 @@
+import DonationForm from "@/components/DonationForm"
 import Footer from "@/components/Footer"
 import Header from "@/components/Header"
 import styles from "./charities.module.css"
@@ -25,13 +26,16 @@ export default function Charities() {
                             Check back soon to meet the causes we&apos;ll support together.
                         </p>
                     </div>
-                    <div className={styles.partners}>
-                        <div className={styles.circles} aria-hidden="true">
-                            {Array.from({ length: 7 }, (_, index) => (
-                                <div className={styles.circle} key={index}>?</div>
-                            ))}
+                    <div id="donations" className={styles.donations}>
+                        <div className={styles.logo}>
+                            <img src="/images/IconOnly_Transparent_NoBuffer.png" alt="Phoenix logo" />
                         </div>
-                        <p className={styles.caption}>Future partners. Shared hope.</p>
+                        <div className={styles.form}>
+                            <DonationForm />
+                        </div>
+                        <div className={styles.logo}>
+                            <img src="/images/TSG%20Logo%203.png" alt="The Silver Guardian logo" />
+                        </div>
                     </div>
                 </div>
             </main>

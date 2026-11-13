@@ -36,7 +36,7 @@ export default function Footer() {
                         </h5>
                         <ul className="space-y-2">
                             <li>
-                                <a href={getLinkHref("/donations")} className="text-gray-300 hover:text-orange-400 transition-colors">
+                                <a href={`${getLinkHref("/charities")}#donations`} className="text-gray-300 hover:text-orange-400 transition-colors">
                                     Donations
                                 </a>
                             </li>
