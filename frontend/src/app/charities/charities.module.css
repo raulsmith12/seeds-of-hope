@@ -51,25 +51,31 @@
     line-height: 1.8;
 }
 
-.donations {
+.intro {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 560px) minmax(0, 1fr);
-    align-items: start;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
     gap: 32px;
+}
+
+.campaigns {
+    border-top: 1px solid #e3dfd7;
+    padding-top: 48px;
     scroll-margin-top: 96px;
 }
 
-.form {
-    min-width: 0;
+.sectionHeading {
+    font-size: clamp(28px, 4vw, 36px);
+    font-weight: 600;
+    line-height: 1.2;
 }
 
-.logo {
+.phoenix {
     display: flex;
     justify-content: center;
-    padding-top: 48px;
 }
 
-.logo img {
+.phoenix img {
     display: block;
     width: 100%;
     max-width: 240px;
@@ -77,21 +83,62 @@
     object-fit: contain;
 }
 
+.campaignList {
+    list-style: none;
+    padding: 0;
+    margin: 32px 0 0;
+}
+
+.campaign {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.campaignLogo {
+    display: block;
+    width: 48px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.campaignName {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.donateButton {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background: #9a4315;
+    color: #fff;
+    font-weight: 600;
+    transition: background 150ms ease;
+}
+
+.donateButton:hover {
+    background: #7c3510;
+}
+
+.donateButton:focus-visible {
+    outline: 3px solid #9a4315;
+    outline-offset: 4px;
+}
+
 @media (max-width: 767px) {
     .layout {
         padding: 64px 16px;
     }
 
-    .donations {
+    .intro {
         grid-template-columns: minmax(0, 1fr);
         gap: 32px;
     }
 
-    .logo {
-        padding-top: 0;
-    }
-
-    .logo img {
+    .phoenix img {
         max-width: 160px;
     }
 }
